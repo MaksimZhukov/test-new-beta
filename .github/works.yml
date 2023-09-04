@@ -1,0 +1,108 @@
+ANYAnyGlobToAnyFile:
+- changed-files: 
+  - AnyGlobToAnyFile: ['*.js', '**']
+  - AnyGlobToAllFiles: ['*.js']
+  - AllGlobsToAnyFile: ['*.js']
+  - AllGlobsToAllFiles: ['*.js']
+
+ANYAnyGlobToAllFiles:
+- any:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['*.js']
+    - AnyGlobToAllFiles: ['*.js', '**']
+    - AllGlobsToAnyFile: ['*.js']
+    - AllGlobsToAllFiles: ['*.js']
+
+ANYAllGlobsToAnyFile:
+- changed-files: 
+  - AnyGlobToAnyFile: ['*.js']
+  - AnyGlobToAllFiles: ['*.js']
+  - AllGlobsToAnyFile: ['**', '**']
+  - AllGlobsToAllFiles: ['*.js']
+
+ANYAllGlobsToAllFiles:
+- any:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['*.js']
+    - AnyGlobToAllFiles: ['*.js']
+    - AllGlobsToAnyFile: ['*.js']
+    - AllGlobsToAllFiles: ['**', '**']
+
+ANYNoMatch:
+- any:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['*.js']
+    - AnyGlobToAllFiles: ['*.js']
+    - AllGlobsToAnyFile: ['*.js']
+    - AllGlobsToAllFiles: ['*.js']
+
+ANYOneObject:
+- any:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['*.js']
+      AnyGlobToAllFiles: ['*.js']
+      AllGlobsToAnyFile: ['*.js']
+      AllGlobsToAllFiles: ['**']
+
+ALLNoMatch:
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+    - AnyGlobToAllFiles: ['**']
+    - AllGlobsToAnyFile: ['**']
+    - AllGlobsToAllFiles: ['*.js']
+
+ALLMatched:
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+    - AnyGlobToAllFiles: ['**']
+    - AllGlobsToAnyFile: ['**']
+    - AllGlobsToAllFiles: ['**']
+
+ALLOneObject:
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+      AnyGlobToAllFiles: ['**']
+      AllGlobsToAnyFile: ['**']
+      AllGlobsToAllFiles: ['**']
+
+ANYandALLCFMatched:
+- any:
+  - changed-files: 
+    - AllGlobsToAllFiles: ['**']
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+
+ANYandALLCFNoMatch:
+- any:
+  - changed-files: 
+    - AllGlobsToAllFiles: ['**']
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+    - AllGlobsToAllFiles: ['*.js']
+
+ANYandALLCFAndBranchNoMatch:
+- any:
+  - base-branch: ['main']
+  - changed-files: 
+    - AllGlobsToAllFiles: ['**']
+- all:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+    - AllGlobsToAllFiles: ['*.js']
+
+ANYandALLCFAndBranchMatched:
+- any:
+  - base-branch: ['main']
+  - changed-files: 
+    - AllGlobsToAllFiles: ['**']
+- all:
+  - head-branch: ['new']
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
+    - AllGlobsToAllFiles: ['**']
+

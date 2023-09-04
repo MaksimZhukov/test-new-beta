@@ -1,0 +1,6 @@
+NonExistentConfig:
+- changed-files: 
+  - AnyGlobToAllFiles: ['*.js']
+  - AllGlobsToAnyFile: ['*.js']
+  - AllGlobsToAllFiles: ['*.js']
+  - AnyToAny: ['*.js', '**']

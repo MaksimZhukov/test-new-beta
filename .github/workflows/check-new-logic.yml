@@ -1,0 +1,76 @@
+name: Test the original action
+on:
+  - pull_request_target
+
+jobs:
+  job1:
+    name: Simple string
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/simple-string.yml
+
+  job2:
+    name: Simple array
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/simple-array.yml
+
+  job3:
+    name: Works
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/works.yml
+
+  job4:
+    name: Non-existent config
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/non-existent-config.yml
+
+  job5:
+    name: Non-existent config files
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/non-existent-config-files.yml
+
+  job6:
+    name: Strings array top level
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+    runs-on: ubuntu-latest
+    steps:
+      - uses: maksimzhukov/labeler@new-beta
+        with:
+          configuration-path: .github/strings-array-top.yml
