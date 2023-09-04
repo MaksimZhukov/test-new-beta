@@ -3,19 +3,19 @@ ANYAnyGlobToAnyFile:
   - AnyGlobToAnyFile: ['*.js', '**']
   - AnyGlobToAllFiles: ['*.js']
   - AllGlobsToAnyFile: ['*.js']
-  - AllGlobsToAllFiles: ['*.js']
+  - AllGlobsToAllFiles: '*.js'
 
 ANYAnyGlobToAllFiles:
 - any:
   - changed-files: 
     - AnyGlobToAnyFile: ['*.js']
     - AnyGlobToAllFiles: ['*.js', '**']
-    - AllGlobsToAnyFile: ['*.js']
+    - AllGlobsToAnyFile: '*.js'
     - AllGlobsToAllFiles: ['*.js']
 
 ANYAllGlobsToAnyFile:
 - changed-files: 
-  - AnyGlobToAnyFile: ['*.js']
+  - AnyGlobToAnyFile: '*.js'
   - AnyGlobToAllFiles: ['*.js']
   - AllGlobsToAnyFile: ['**', '**']
   - AllGlobsToAllFiles: ['*.js']
@@ -55,7 +55,7 @@ ALLNoMatch:
 ALLMatched:
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
+    - AnyGlobToAnyFile: '**'
     - AnyGlobToAllFiles: ['**']
     - AllGlobsToAnyFile: ['**']
     - AllGlobsToAllFiles: ['**']
