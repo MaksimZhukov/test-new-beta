@@ -1,4 +1,4 @@
-name: "Label Previous Pull Requests"
+name: "Manual testing"
 on:
   workflow_dispatch:
 
@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v4
-      with:        
+      with:       
+        configuration-path: '.github/labelerOld.yml'
         pr-number: |
           10
