@@ -1,10 +1,5 @@
-
 JustLabel:
-- any:
-  - changed-files: 
-    - AnyGlobToAnyFile: ['**']
+- ['**']
 
 JSLabel:
-- any:
-  - changed-files: 
-    - AnyGlobToAnyFile: ['src/*.js']
+- ['src/*.js']
