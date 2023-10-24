@@ -1,0 +1,25 @@
+name: "Test outputs"
+on:
+- pull_request_target
+
+jobs:
+  triage:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Labeler
+      id: labeler
+      uses: maksimzhukov/labeler@resolve-merge-conflicts
+    
+    - name: Check outputs
+      run: |
+        echo 'New labels:'
+        echo '${{ steps.labeler.outputs.new-labels }}'
+        echo '-------------------------'
+        echo 'All labels:'
+        echo '${{ steps.labeler.outputs.all-labels }}'
