@@ -1,2 +1,7 @@
+# JustLabel:
+# - base-branch: ['main']
+
 JustLabel:
-- base-branch: ['main']
+- any:
+  - changed-files: 
+    - AnyGlobToAnyFile: ['**']
