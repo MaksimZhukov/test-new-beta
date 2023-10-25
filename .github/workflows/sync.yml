@@ -1,0 +1,13 @@
+name: "Test outputs"
+on:
+- pull_request_target
+
+jobs:
+  triage:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:      
+    - name: Labeler
+      uses: actions/labeler@v4
