@@ -11,3 +11,6 @@ jobs:
     steps:      
     - name: Labeler
       uses: actions/labeler@v4
+      with:       
+        configuration-path: '.github/labelerOld.yml'
+
