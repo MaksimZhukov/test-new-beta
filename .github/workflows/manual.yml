@@ -13,7 +13,7 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v4
+    - uses: maksimzhukov/labeler@resolve-merge-conflicts
       with:       
         configuration-path: '.github/labelerOld.yml'
         pr-number: |
