@@ -1,6 +1,10 @@
 name: "Manual testing"
 on:
   workflow_dispatch:
+    inputs:
+      PR_NUMBER:
+        description: 'PR number'
+        required: true
 
 jobs:
   triage:
@@ -13,4 +17,4 @@ jobs:
       with:       
         configuration-path: '.github/labelerOld.yml'
         pr-number: |
-          10
+          ${{ inputs.PR_NUMBER }}
