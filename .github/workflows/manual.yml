@@ -15,5 +15,6 @@ jobs:
     steps:
     - uses: maksimzhukov/labeler@resolve-merge-conflicts
       with:       
+        configuration-path: '.github/labels-limit.yml'
         pr-number: |
           ${{ inputs.PR_NUMBER }}
