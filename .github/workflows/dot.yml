@@ -1,0 +1,16 @@
+name: "dot"
+on:
+  workflow_dispatch:
+
+jobs:
+  triage:
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: maksimzhukov/labeler@resolve-merge-conflicts
+    
+    - uses: maksimzhukov/labeler@resolve-merge-conflicts
+      with: 
+        dot: true
