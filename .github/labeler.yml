@@ -4,9 +4,9 @@
 JustLabel:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
+    - any-glob-to-any-file: ['**']
 
 JSLabel:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['src/*.js']
+    - any-glob-to-any-file: ['src/*.js']
