@@ -1,108 +1,108 @@
 ANYAnyGlobToAnyFile:
 - changed-files: 
-  - AnyGlobToAnyFile: ['*.js', '**']
-  - AnyGlobToAllFiles: ['*.js']
-  - AllGlobsToAnyFile: ['*.js']
-  - AllGlobsToAllFiles: '*.js'
+  - any-glob-to-any-file: ['*.js', '**']
+  - any-glob-to-all-files: ['*.js']
+  - all-globs-to-any-file: ['*.js']
+  - all-globs-to-all-files: '*.js'
 
 ANYAnyGlobToAllFiles:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['*.js']
-    - AnyGlobToAllFiles: ['*.js', '**']
-    - AllGlobsToAnyFile: '*.js'
-    - AllGlobsToAllFiles: ['*.js']
+    - any-glob-to-any-file: ['*.js']
+    - any-glob-to-all-files: ['*.js', '**']
+    - all-globs-to-any-file: '*.js'
+    - all-globs-to-all-files: ['*.js']
 
 ANYAllGlobsToAnyFile:
 - changed-files: 
-  - AnyGlobToAnyFile: '*.js'
-  - AnyGlobToAllFiles: ['*.js']
-  - AllGlobsToAnyFile: ['**', '**']
-  - AllGlobsToAllFiles: ['*.js']
+  - any-glob-to-any-file: '*.js'
+  - any-glob-to-all-files: ['*.js']
+  - all-globs-to-any-file: ['**', '**']
+  - all-globs-to-all-files: ['*.js']
 
 ANYAllGlobsToAllFiles:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['*.js']
-    - AnyGlobToAllFiles: ['*.js']
-    - AllGlobsToAnyFile: ['*.js']
-    - AllGlobsToAllFiles: ['**', '**']
+    - any-glob-to-any-file: ['*.js']
+    - any-glob-to-all-files: ['*.js']
+    - all-globs-to-any-file: ['*.js']
+    - all-globs-to-all-files: ['**', '**']
 
 ANYNoMatch:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['*.js']
-    - AnyGlobToAllFiles: ['*.js']
-    - AllGlobsToAnyFile: ['*.js']
-    - AllGlobsToAllFiles: ['*.js']
+    - any-glob-to-any-file: ['*.js']
+    - any-glob-to-all-files: ['*.js']
+    - all-globs-to-any-file: ['*.js']
+    - all-globs-to-all-files: ['*.js']
 
 ANYOneObject:
 - any:
   - changed-files: 
-    - AnyGlobToAnyFile: ['*.js']
-      AnyGlobToAllFiles: ['*.js']
-      AllGlobsToAnyFile: ['*.js']
-      AllGlobsToAllFiles: ['**']
+    - any-glob-to-any-file: ['*.js']
+      any-glob-to-all-files: ['*.js']
+      all-globs-to-any-file: ['*.js']
+      all-globs-to-all-files: ['**']
 
 ALLNoMatch:
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
-    - AnyGlobToAllFiles: ['**']
-    - AllGlobsToAnyFile: ['**']
-    - AllGlobsToAllFiles: ['*.js']
+    - any-glob-to-any-file: ['**']
+    - any-glob-to-all-files: ['**']
+    - all-globs-to-any-file: ['**']
+    - all-globs-to-all-files: ['*.js']
 
 ALLMatched:
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: '**'
-    - AnyGlobToAllFiles: ['**']
-    - AllGlobsToAnyFile: ['**']
-    - AllGlobsToAllFiles: ['**']
+    - any-glob-to-any-file: '**'
+    - any-glob-to-all-files: ['**']
+    - all-globs-to-any-file: ['**']
+    - all-globs-to-all-files: ['**']
 
 ALLOneObject:
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
-      AnyGlobToAllFiles: ['**']
-      AllGlobsToAnyFile: ['**']
-      AllGlobsToAllFiles: ['**']
+    - any-glob-to-any-file: ['**']
+      any-glob-to-all-files: ['**']
+      all-globs-to-any-file: ['**']
+      all-globs-to-all-files: ['**']
 
 ANYandALLCFMatched:
 - any:
   - changed-files: 
-    - AllGlobsToAllFiles: ['**']
+    - all-globs-to-all-files: ['**']
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
+    - any-glob-to-any-file: ['**']
 
 ANYandALLCFNoMatch:
 - any:
   - changed-files: 
-    - AllGlobsToAllFiles: ['**']
+    - all-globs-to-all-files: ['**']
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
-    - AllGlobsToAllFiles: ['*.js']
+    - any-glob-to-any-file: ['**']
+    - all-globs-to-all-files: ['*.js']
 
 ANYandALLCFAndBranchNoMatch:
 - any:
   - base-branch: ['main']
   - changed-files: 
-    - AllGlobsToAllFiles: ['**']
+    - all-globs-to-all-files: ['**']
 - all:
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
-    - AllGlobsToAllFiles: ['*.js']
+    - any-glob-to-any-file: ['**']
+    - all-globs-to-all-files: ['*.js']
 
 ANYandALLCFAndBranchMatched:
 - any:
   - base-branch: ['main']
   - changed-files: 
-    - AllGlobsToAllFiles: ['**']
+    - all-globs-to-all-files: ['**']
 - all:
   - head-branch: ['new']
   - changed-files: 
-    - AnyGlobToAnyFile: ['**']
-    - AllGlobsToAllFiles: ['**']
+    - any-glob-to-any-file: ['**']
+    - all-globs-to-all-files: ['**']
 
