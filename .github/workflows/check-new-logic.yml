@@ -11,7 +11,7 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/simple-string.yml
 
@@ -23,7 +23,7 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation 
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/simple-array.yml
 
@@ -35,7 +35,7 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation 
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/works.yml
 
@@ -47,7 +47,7 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation 
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/non-existent-config.yml
 
@@ -59,7 +59,7 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation 
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/non-existent-config-files.yml
 
@@ -71,6 +71,6 @@ jobs:
       issues: write
     runs-on: ubuntu-latest
     steps:
-      - uses: maksimzhukov/labeler@apply-suggestions-and-update-documentation
+      - uses: maksimzhukov/labeler@v5.0.0-beta
         with:
           configuration-path: .github/strings-array-top.yml
