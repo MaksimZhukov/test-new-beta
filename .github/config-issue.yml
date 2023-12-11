@@ -1,0 +1,3 @@
+terraform:
+  - changed-files:
+    - any-glob-to-any-file: terraform/**
